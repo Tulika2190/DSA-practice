@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int info;
+    struct node *next;
+};
+int main() {
+    struct node*head;
+struct node *second;
+struct node *third;
+struct node *fourth;
+//allocating memory
+head=(struct node*) malloc(sizeof(struct node));
+second=(struct node*) malloc(sizeof(struct node));
+third=(struct node*) malloc(sizeof(struct node));
+fourth=(struct node*) malloc(sizeof(struct node));
+//linking nodes
+head->info=10;
+head->next=second;
+second->info=30;
+second->next=third;
+third->info=20;
+third->next=fourth;
+fourth->info=70;
+fourth->next=NULL;
+ return 0;
+}
