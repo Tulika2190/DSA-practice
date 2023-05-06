@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int info;
+    struct node *next;
+};
+void linkedlisttraverse(struct node*ptr)
+{
+    while(ptr!=NULL)
+    {
+        printf(" element is %d ",ptr->info);
+        ptr=ptr->next;
+    }
+}
+int main() {
+
+//traversing the list
+linkedlisttraverse(head);
+  return 0;
+}
