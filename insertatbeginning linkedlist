@@ -1,0 +1,12 @@
+//insertion at the beginning
+struct node *insertatbeg(struct node *head, int info)
+{
+    struct node *ptr= (struct node *)malloc(sizeof(struct node));
+    ptr->next=head;
+    ptr->info=info;
+    return ptr;
+}
+int main() {
+head= insertatbeg(head,50);
+  return 0;
+}
