@@ -1,0 +1,16 @@
+//insert at the end
+struct node *insertatend(struct node *head, int info)
+{
+    struct node *ptr=(struct node *)malloc(sizeof(struct node));
+    ptr->info=info;
+    struct node *p=head;
+    while(p->next!=NULL)
+    {
+        p=p->next;
+    }
+    p->next=ptr;
+    ptr->next=NULL;
+    return head;
+}
+//calling the insert at the end
+//head= insertatend(head,11);
