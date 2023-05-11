@@ -1,0 +1,12 @@
+/insert after a node
+struct  node *insertafter(struct node *head, struct node *prevnode, int info)
+{
+    struct node *ptr=(struct node *) malloc(sizeof(struct node));
+    ptr->info=info;
+    ptr->next=prevnode->next;
+    prevnode->next=ptr;
+    return head;
+}
+head=insertafter(head,second,45);
+printf("insert after a node \n");
+linkedlisttraverse(head);
