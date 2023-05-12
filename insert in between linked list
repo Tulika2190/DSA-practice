@@ -1,0 +1,18 @@
+//insert in between
+struct node *insertatindex(struct node*head, int info, int index)
+{
+    struct node *ptr=(struct node *)malloc(sizeof(struct node));
+struct node *p=head;
+int i=0;
+while(i!=index-1)
+{
+    p=p->next;
+    i++;
+}
+ptr->info=info;
+ptr->next=p->next;
+p->next=ptr;
+return head;
+}
+//calling the insertatbetween
+head=insertatindex(head,50,1);
