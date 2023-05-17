@@ -1,0 +1,13 @@
+struct node *deletefirst(struct node *head)
+{
+    struct node *ptr=head;
+    head=head->next;
+    free(ptr);
+    return head;
+}
+
+int main() {
+    head=deletefirst(head);
+
+    return 0;
+}
